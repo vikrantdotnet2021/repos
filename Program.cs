@@ -1,28 +1,39 @@
-﻿// write a program to find the reverse no
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-namespace Reverse_Number
+﻿// write a program to calculate the grade.
+using System; // System is a namespace
+
+public class GradeComputation
 {
-    class Program
+    // Main method which starts the program execution.
+    public static void Main()
     {
-        static void Main(string[] args)
+        string[] studentId = { "STU01", "STU02", "STU03", "STU04", "STU05" };
+        int[] marks = { 76, 83, 92, 65, 34 };
+        Console.WriteLine("Finds the grade for each student");
+        for (int i = 0; i < studentId.Length; i++)
         {
-            int num, temp, remainder, reverse = 0;
-            Console.WriteLine("Enter an integer \n");
-            num = int.Parse(Console.ReadLine());
-            temp = num;
-            while (num > 0)
+            if (marks[i] > 90)
             {
-                remainder = num % 10;
-                reverse = reverse * 10 + remainder;
-                num /= 10;
+                Console.WriteLine(studentId[i] + " Grade: " + "A");
             }
-            Console.WriteLine("Given number is = {0}", temp);
-            Console.WriteLine("Its reverse is = {0}", reverse);
-            Console.ReadLine();
+            else if (marks[i] > 80)
+            {
+                Console.WriteLine(studentId[i] + " Grade: " + "B");
+            }
+            else if (marks[i] > 70)
+            {
+                Console.WriteLine(studentId[i] + " Grade: " + "C");
+            }
+            else if (marks[i] > 50)
+            {
+                Console.WriteLine(studentId[i] + " Grade: " + "D");
+            }
+            else
+            {
+                Console.WriteLine(studentId[i] + " Grade: " + "FAIL");
+            }
         }
+        Console.ReadKey();
     }
 }
+
+
