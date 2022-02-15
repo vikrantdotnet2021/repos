@@ -1,29 +1,26 @@
-﻿// accept a no and print whether it is even or odd
+﻿// display factorial
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp2
+public class exercise 15
 {
-    class Program
+    public static void Main()
     {
-        static void Main(string[] args)
-        {
-            int number;
-            Console.WriteLine("enter number");
-            number = Convert.ToInt32(Console.ReadLine());
-            if (number % 2 == 0) goto Even;
-            Console.WriteLine("no is odd");
-            goto End;
-        Even:
-            Console.WriteLine("no is even");
-        End:;
+        int i, f = 1, num;
 
-            Console.ReadLine();
+        Console.Write("\n\n");
+        Console.Write("Calculate the factorial of a given number:\n");
+        Console.Write("--------------------------------------------");
+        Console.Write("\n\n");
 
-        }
+        Console.Write("Input the number : ");
+        num = Convert.ToInt32(Console.ReadLine());
+        for (i = 1; i <= num; i++)
+            f = f * i;
+
+        Console.Write("The Factorial of {0} is: {1}\n", num, f);
     }
 }
-
