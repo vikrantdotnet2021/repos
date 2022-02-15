@@ -1,4 +1,4 @@
-﻿// wap float
+﻿// wap refrence type (string)
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,10 +12,10 @@ namespace ConsoleApp1
 
         public static void Main()
         {
-            float b = 123.4567890f; //signed
+            String b = "Maninder";
             Console.WriteLine(" value " + b);
             Console.WriteLine("enter value ");
-            b = Convert.ToSingle(Console.ReadLine());
+            b = Console.ReadLine();
             Console.WriteLine("value = " + b);
 
 
@@ -24,4 +24,3 @@ namespace ConsoleApp1
         }
     }
 }
-
