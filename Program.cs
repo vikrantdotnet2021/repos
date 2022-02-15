@@ -1,4 +1,4 @@
-﻿// wap to accept your name and print
+﻿// wap to accept 3 no. and print addtion of 3 no.
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,14 +11,18 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            //wap to accept radius and print area and circ of circle
-            String name;
-            Console.WriteLine("enter your name");
-            name = Console.ReadLine();
-            Console.WriteLine("your name is " + name);
+            //wap to accept 3 no. and display addtion of 3 no.
+            int num1, num2, num3, res;
+            Console.WriteLine("enter number1");
+            num1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("enter number2");
+            num2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("enter number3");
+            num3 = Convert.ToInt32(Console.ReadLine());
+            res = num1 + num2 + num3;
+            Console.WriteLine("addition = " + res);
             Console.ReadLine();
         }
     }
 }
-
 
