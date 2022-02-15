@@ -1,39 +1,28 @@
-﻿// write a program to calculate the grade.
-using System; // System is a namespace
-
-public class GradeComputation
+﻿// wap to print the numer is prime or not
+using System;
+namespace Demo
 {
-    // Main method which starts the program execution.
-    public static void Main()
+    class MyApplication
     {
-        string[] studentId = { "STU01", "STU02", "STU03", "STU04", "STU05" };
-        int[] marks = { 76, 83, 92, 65, 34 };
-        Console.WriteLine("Finds the grade for each student");
-        for (int i = 0; i < studentId.Length; i++)
+        public static void Main()
         {
-            if (marks[i] > 90)
+            int n = 5, a = 0;
+            for (int i = 1; i <= n; i++)
             {
-                Console.WriteLine(studentId[i] + " Grade: " + "A");
+                if (n % i == 0)
+                {
+                    a++;
+                }
             }
-            else if (marks[i] > 80)
+            if (a == 2)
             {
-                Console.WriteLine(studentId[i] + " Grade: " + "B");
-            }
-            else if (marks[i] > 70)
-            {
-                Console.WriteLine(studentId[i] + " Grade: " + "C");
-            }
-            else if (marks[i] > 50)
-            {
-                Console.WriteLine(studentId[i] + " Grade: " + "D");
+                Console.WriteLine("{0} is a Prime Number", n);
             }
             else
             {
-                Console.WriteLine(studentId[i] + " Grade: " + "FAIL");
+                Console.WriteLine("Not a Prime Number");
             }
+            Console.ReadLine();
         }
-        Console.ReadKey();
     }
 }
-
-
