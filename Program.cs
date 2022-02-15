@@ -1,4 +1,5 @@
-﻿// wap to print no from 1 to 10 using system
+﻿// accept a no and print whether it is even or odd
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,17 +11,16 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-            // wap to print no from 1 to 10 using system
-            int i, j;
-            for (i = 1; i < 10; i++)
-            {
-                for (j = 1; j < i; j++)
-                {
-                    Console.Write(j + "\t");
-                }
-                Console.WriteLine();
+            int number;
+            Console.WriteLine("enter number");
+            number = Convert.ToInt32(Console.ReadLine());
+            if (number % 2 == 0) goto Even;
+            Console.WriteLine("no is odd");
+            goto End;
+        Even:
+            Console.WriteLine("no is even");
+        End:;
 
-            }
             Console.ReadLine();
 
         }
