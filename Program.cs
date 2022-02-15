@@ -1,28 +1,26 @@
-﻿// wap to print the numer is prime or not
+﻿// wap to print no from 1 to 10 using while loop
 using System;
-namespace Demo
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
 {
-    class MyApplication
+    class Program
     {
-        public static void Main()
+        static void Main(string[] args)
         {
-            int n = 5, a = 0;
-            for (int i = 1; i <= n; i++)
+            // wap to print no from 1 to 10 using while loop
+            int i = 1;
+            while (i <= 10)
             {
-                if (n % i == 0)
-                {
-                    a++;
-                }
-            }
-            if (a == 2)
-            {
-                Console.WriteLine("{0} is a Prime Number", n);
-            }
-            else
-            {
-                Console.WriteLine("Not a Prime Number");
+                Console.WriteLine("i = " + i);
+                i++;
             }
             Console.ReadLine();
+
         }
     }
 }
+
