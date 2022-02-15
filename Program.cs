@@ -1,4 +1,4 @@
-﻿// wap if else
+﻿// wap to accept your name and print
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,25 +7,15 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    class Class1
+    class Program
     {
-
-        public static void Main()
+        static void Main(string[] args)
         {
-            //if else 
-            //wap to accept 2 no and print greater no.
-            int n1, n2;
-            Console.WriteLine("enter 2 no.");
-            n1 = Convert.ToInt32(Console.ReadLine());
-            n2 = Convert.ToInt32(Console.ReadLine());
-            if (n1 > n2)
-                Console.WriteLine("n1 is greter");
-            else
-                Console.WriteLine("n2 is greater");
-
-
-
-
+            //wap to accept radius and print area and circ of circle
+            String name;
+            Console.WriteLine("enter your name");
+            name = Console.ReadLine();
+            Console.WriteLine("your name is " + name);
             Console.ReadLine();
         }
     }
