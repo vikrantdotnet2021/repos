@@ -1,46 +1,28 @@
-﻿// wap switch
+﻿// write a program to find the reverse no
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-namespace ConsoleApp1
+namespace Reverse_Number
 {
-    class Class1
+    class Program
     {
-
-        public static void Main()
+        static void Main(string[] args)
         {
-            //if else 
-            //wap to accept 2 no. and operator
-            int n1, n2, res = 0;
-            char op;
-            Console.WriteLine("Enter 2 no");
-            n1 = Convert.ToInt32(Console.ReadLine());
-            n2 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter operator");
-            op = Convert.ToChar(Console.ReadLine());
-            switch (op)
+            int num, temp, remainder, reverse = 0;
+            Console.WriteLine("Enter an integer \n");
+            num = int.Parse(Console.ReadLine());
+            temp = num;
+            while (num > 0)
             {
-                case '+':
-                    res = n1 + n2;
-                    break;
-                case '-':
-                    res = n1 - n2;
-                    break;
-                case '*':
-                    res = n1 * n2;
-                    break;
-                default:
-                    Console.WriteLine("invalid");
-                    break;
-
+                remainder = num % 10;
+                reverse = reverse * 10 + remainder;
+                num /= 10;
             }
-
-            Console.WriteLine("res " + res);
+            Console.WriteLine("Given number is = {0}", temp);
+            Console.WriteLine("Its reverse is = {0}", reverse);
             Console.ReadLine();
         }
     }
 }
-
