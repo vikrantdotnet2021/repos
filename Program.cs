@@ -1,4 +1,4 @@
-﻿// wap to accept 3 no. and print addtion of 3 no.
+﻿// write a program to accept character from the user 
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,21 +7,18 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    class Program
+    class Class1
     {
-        static void Main(string[] args)
+        enum grade { dist = 90, first = 60, second = 40 }
+        public static void Main()
         {
-            //wap to accept 3 no. and display addtion of 3 no.
-            int num1, num2, num3, res;
-            Console.WriteLine("enter number1");
-            num1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("enter number2");
-            num2 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("enter number3");
-            num3 = Convert.ToInt32(Console.ReadLine());
-            res = num1 + num2 + num3;
-            Console.WriteLine("addition = " + res);
-            Console.ReadLine();
+            //write a program to accept character from the user 
+            grade gr;
+
+            gr = grade.dist;
+            Console.WriteLine("grade  = " + gr);
+            Console.WriteLine("grade value = " + Convert.ToInt32(gr));
+
         }
     }
 }
