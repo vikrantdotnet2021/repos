@@ -1,5 +1,4 @@
-﻿// wap to print no from 1 to 10 using while loop
-using System;
+﻿// wap to print no from 1 to 10 using system
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,12 +10,16 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-            // wap to print no from 1 to 10 using while loop
-            int i = 1;
-            while (i <= 10)
+            // wap to print no from 1 to 10 using system
+            int i, j;
+            for (i = 1; i < 10; i++)
             {
-                Console.WriteLine("i = " + i);
-                i++;
+                for (j = 1; j < i; j++)
+                {
+                    Console.Write(j + "\t");
+                }
+                Console.WriteLine();
+
             }
             Console.ReadLine();
 
