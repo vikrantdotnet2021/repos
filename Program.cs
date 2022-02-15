@@ -1,26 +1,34 @@
-﻿// display factorial
+﻿// example of local and shared variable
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-public class exercise 15
+namespace ConsoleApp2
 {
-    public static void Main()
+    class Program
     {
-        int i, f = 1, num;
+        //class level variable
+        static int fact = 2; //shared variable
 
-        Console.Write("\n\n");
-        Console.Write("Calculate the factorial of a given number:\n");
-        Console.Write("--------------------------------------------");
-        Console.Write("\n\n");
+        static void factorial()
+        {
+            int fact = 1; // local variable 
+            Console.WriteLine("value of fact local varialbe inside method " + fact);
 
-        Console.Write("Input the number : ");
-        num = Convert.ToInt32(Console.ReadLine());
-        for (i = 1; i <= num; i++)
-            f = f * i;
 
-        Console.Write("The Factorial of {0} is: {1}\n", num, f);
+
+        }
+        static void Main(string[] args)
+        {
+
+
+            factorial();
+            Console.WriteLine("fact inside main  = {0}", fact);
+            Console.ReadLine();
+
+        }
     }
 }
+
